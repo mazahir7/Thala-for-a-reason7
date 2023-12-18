@@ -22,8 +22,8 @@ btns.forEach(btn => {
       <audio src="assets/Thala.mp3" autoplay loop></audio>`;
 
       const boleJoKoyal = document.querySelector("audio");
-
-      h1.innerText = "mazahir is thala for a reason";
+      const fullName = document.getElementById("fname").value;
+      h1.innerText = fullName + " is thala for a reason";
 
     }
   });
