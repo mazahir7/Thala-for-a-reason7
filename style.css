@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	/* changes the 1REM from 16px to 10px */
+	font-size: 62.5%;
+}
+
+body {
+	font-family: "Poppins", sans-serif;
+	height: 100vh;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	position: relative;
+	background: url(assets/Dhoni.jpg);
+	background-repeat: round;
+	background-size: contain;
+	background-position: center center;
+}
+
+button {
+	font-weight: bold;
+	border: 2px #000 solid;
+	font-family: inherit;
+	font-size: 2rem;
+	background-color: #5361fd;
+	color: #f7f63a;
+	transition: all 0.5s ease;
+	cursor: pointer;
+	padding: 1rem;
+}
+
+button:hover {
+	color: #5361fd;
+	background-color: #f7f63a;
+}
+
+label {
+	font-size: 2.4rem;
+	font-weight: bold;
+}
+
+input {
+	font-size: 2.4rem;
+	padding: 1rem;
+	font-weight: bold;
+	text-transform: capitalize;
+}
+
+.input-container {
+	display: flex;
+	flex-direction: column;
+	background-color: #f7f63a;
+	padding: 2rem 4rem;
+	border: 11px;
+	box-shadow: 0 0 5px #000;
+}
+
+.input-container div {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 2rem;
+}
+
+.line {
+	width: 100%;
+	border-bottom: 2px solid #000;
+}
+
+.thala {
+	display: flex;
+	justify-content: center;
+	/* background-color: red; */
+	background-repeat: no-repeat;
+	background-size: contain;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	aspect-ratio: 1/1;
+	width: 90%;
+	height: 95%;
+	transform: translate(-50%, -50%);
+	z-index: 9999;
+	border-radius: 11px;
+	overflow: hidden;
+	transform-origin: top;
+	display: none;
+	animation: dance 0.6s linear infinite alternate;
+}
+
+/* javascript not letting me set the display to flex directly so had to make a helper class */
+.display-flex {
+	display: flex !important;
+}
+
+.thala img {
+	filter: brightness(120%) contrast(110%);
+}
+
+@keyframes dance {
+	0% {
+		transform: translate(-50%, -50%) translateX(-5rem) scale(1.2);
+	}
+
+	50% {
+		transform: translate(-50%, -50%) translateX(0) scale(1);
+	}
+
+	100% {
+		transform: translate(-50%, -50%) translateX(5rem) scale(0.97);
+	}
+}
+
+h1 {
+	position: absolute;
+	top: 3rem;
+	color: #fff;
+	z-index: 99999;
+	text-transform: capitalize;
+	font-size: 3.6rem;
+	animation: h1Dance 0.6s linear infinite alternate;
+	text-align: center;
+}
+
+@keyframes h1Dance {
+	0% {
+		transform: translateX(-5rem) scale(1.2);
+	}
+
+	50% {
+		transform: translateX(0) scale(1);
+	}
+
+	100% {
+		transform: translateX(5rem) scale(0.97);
+	}
+}
